@@ -45,3 +45,82 @@
       background: linear-gradient(145deg, #111827, #0b0f14);
       padding: 2rem;
       border-radius: 14px;
+      border: 1px solid #1f2937;
+      box-shadow: 0 0 0 rgba(0,0,0,0);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(0, 112, 243, 0.15);
+    }
+
+    .section h2 {
+      margin: 0;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 1.25rem;
+      letter-spacing: 0.5px;
+    }
+
+    .section h2 a {
+      color: #93c5fd;
+      text-decoration: none;
+      display: inline-block;
+      padding-bottom: 0.25rem;
+      border-bottom: 1px solid transparent;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .section h2 a:hover {
+      color: #bfdbfe;
+      border-color: #3b82f6;
+    }
+
+    /* Subtle grid texture */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .section, header {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>John Meeks</h1>
+    <p>jmeeks7227@gmail.com</p>
+  </header>
+
+  <div class="section">
+    <h2><a href="coursework.html">Coursework</a></h2>
+  </div>
+
+  <div class="section">
+    <h2><a href="certifications.html">Certifications</a></h2>
+  </div>
+
+  <div class="section">
+    <h2><a href="projects.html">Projects</a></h2>
+  </div>
+
+  <div class="section">
+    <h2><a href="research.html">Extracurricular Research</a></h2>
+  </div>
+
+  <div class="section">
+    <h2><a href="professional.html">Professional</a></h2>
+  </div>
+
+</body>
+</html>
