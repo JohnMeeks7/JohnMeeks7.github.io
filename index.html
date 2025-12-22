@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>John Meeks | Portfolio</title>
 
-  <!-- Import Montserrat font -->
+  <!-- Montserrat font -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
@@ -35,7 +35,7 @@
       opacity: 0.85;
     }
 
-    .section {
+    .container {
       max-width: 900px;
       margin: 2rem auto;
       background: #fff;
@@ -44,11 +44,47 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
-    .section h2 {
-      margin-top: 0;
+    /* Tabs */
+    .tabs {
+      display: flex;
+      border-bottom: 2px solid #e0e0e0;
+      margin-bottom: 1.5rem;
     }
 
-    ul {
+    .tab {
+      padding: 0.75rem 1.25rem;
+      cursor: pointer;
+      font-weight: 600;
+      color: #555;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    input:checked + label {
+      color: #0366d6;
+      border-bottom: 3px solid #0366d6;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    #coursework:checked ~ #coursework-content,
+    #certs:checked ~ #certs-content,
+    #projects:checked ~ #projects-content,
+    #research:checked ~ #research-content,
+    #professional:checked ~ #professional-content {
+      display: block;
+    }
+
+    /* Subtabs */
+    .subtabs {
+      margin-top: 1rem;
+    }
+
+    .subtabs ul {
       padding-left: 1.2rem;
     }
 
@@ -66,31 +102,73 @@
 <body>
   <header>
     <h1>John Meeks</h1>
-    <p>BCom - Finance | MSc - Applied Statistics</p>
+    <p>BCom – Finance | MSc – Applied Statistics</p>
   </header>
 
-  <div class="section">
-    <h2>Repository</h2>
-    <ul>
-      <li><a href="#">BCom - Finance</a></li>
-      <li><a href="#">MSc - Statistics</a></li>
-      <li><a href="#">Certifications</a></li>
-      <li><a href="#">Extracurricular Readings</a></li>
-    </ul>
-  </div>
+  <div class="container">
 
-  <div class="section">
-    <h2>Projects & Professional Resources</h2>
-    <ul>
-      <li><a href="#">Portfolio</a></li>
-      <li><a href="#">Resume</a></li>
-      <li><a href="#">LinkedIn</a></li>
-    </ul>
-  </div>
+    <!-- Main Tabs -->
+    <div class="tabs">
+      <input type="radio" id="coursework" name="tab" checked>
+      <label class="tab" for="coursework">Coursework</label>
 
-  <div class="section">
-    <h2>Contact</h2>
-    <p>You can best reach me via email at <strong>jmeeks7227@example.com</strong>.</p>
+      <input type="radio" id="certs" name="tab">
+      <label class="tab" for="certs">Certifications</label>
+
+      <input type="radio" id="projects" name="tab">
+      <label class="tab" for="projects">Projects</label>
+
+      <input type="radio" id="research" name="tab">
+      <label class="tab" for="research">Extracurricular Research</label>
+
+      <input type="radio" id="professional" name="tab">
+      <label class="tab" for="professional">Professional</label>
+    </div>
+
+    <!-- Coursework -->
+    <div id="coursework-content" class="tab-content">
+      <div class="subtabs">
+        <ul>
+          <li><a href="#">BCom – Finance</a></li>
+          <li><a href="#">MSc – Applied Statistics</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Certifications -->
+    <div id="certs-content" class="tab-content">
+      <div class="subtabs">
+        <ul>
+          <li><a href="#">BigQuery</a></li>
+          <li><a href="#">Machine Learning</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div id="projects-content" class="tab-content">
+      <ul>
+        <li><a href="#">Project Portfolio</a></li>
+      </ul>
+    </div>
+
+    <!-- Extracurricular Research -->
+    <div id="research-content" class="tab-content">
+      <ul>
+        <li><a href="#">Independent Research & Readings</a></li>
+      </ul>
+    </div>
+
+    <!-- Professional -->
+    <div id="professional-content" class="tab-content">
+      <div class="subtabs">
+        <ul>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Resume</a></li>
+        </ul>
+      </div>
+    </div>
+
   </div>
 </body>
 </html>
