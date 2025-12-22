@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>John Meeks | Portfolio</title>
+  <title>John Meeks</title>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
     body {
-      font-family: "Montserrat", sans-serif;
+      font-family: "JetBrains Mono", monospace;
       margin: 0;
       padding: 0;
       background: #0b0f14;
@@ -55,23 +55,25 @@
       box-shadow: 0 10px 30px rgba(0, 112, 243, 0.15);
     }
 
-    .section h2 {
+    .section-link {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .section-link h2 {
       margin: 0;
       font-family: "JetBrains Mono", monospace;
       font-size: 1.25rem;
       letter-spacing: 0.5px;
-    }
-
-    .section h2 a {
       color: #93c5fd;
-      text-decoration: none;
+      border-bottom: 1px solid transparent;
       display: inline-block;
       padding-bottom: 0.25rem;
-      border-bottom: 1px solid transparent;
       transition: color 0.2s ease, border-color 0.2s ease;
     }
 
-    .section h2 a:hover {
+    .section:hover .section-link h2 {
       color: #bfdbfe;
       border-color: #3b82f6;
     }
@@ -93,6 +95,10 @@
       position: relative;
       z-index: 1;
     }
+
+    .section {
+      cursor: pointer;
+    }
   </style>
 </head>
 
@@ -103,23 +109,33 @@
   </header>
 
   <div class="section">
-    <h2><a href="coursework.html">Coursework</a></h2>
+    <a href="coursework.html" class="section-link">
+      <h2>Coursework</h2>
+    </a>
   </div>
 
   <div class="section">
-    <h2><a href="certifications.html">Certifications</a></h2>
+    <a href="certifications.html" class="section-link">
+      <h2>Certifications</h2>
+    </a>
   </div>
 
   <div class="section">
-    <h2><a href="projects.html">Projects</a></h2>
+    <a href="projects.html" class="section-link">
+      <h2>Projects</h2>
+    </a>
   </div>
 
   <div class="section">
-    <h2><a href="research.html">Extracurricular Research</a></h2>
+    <a href="research.html" class="section-link">
+      <h2>Extracurricular Research</h2>
+    </a>
   </div>
 
   <div class="section">
-    <h2><a href="professional.html">Professional</a></h2>
+    <a href="professional.html" class="section-link">
+      <h2>Professional Resources</h2>
+    </a>
   </div>
 
 </body>
