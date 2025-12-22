@@ -39,17 +39,17 @@
       font-family: "JetBrains Mono", monospace;
     }
 
-    /* Container for the two cards */
     .cards-container {
       max-width: 900px;
       margin: 2rem auto;
       display: flex;
-      gap: 1rem; /* small space between cards */
+      gap: 1rem;
       flex-wrap: wrap;
     }
 
     .card {
-      flex: 1 1 48%; /* two cards per row, almost equal width */
+      flex: 1 1 48%; /* two cards side by side */
+      min-width: 300px;
       background: linear-gradient(145deg, #111827, #0b0f14);
       padding: 2rem;
       border-radius: 14px;
@@ -82,6 +82,22 @@
       border-color: #3b82f6;
     }
 
+    .description-card {
+      width: 100%;
+      background: linear-gradient(145deg, #111827, #0b0f14);
+      padding: 2rem;
+      border-radius: 14px;
+      border: 1px solid #1f2937;
+      margin-bottom: 1rem;
+    }
+
+    .description-card p {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #cbd5e1;
+    }
+
     body::before {
       content: "";
       position: fixed;
@@ -94,12 +110,11 @@
       z-index: 0;
     }
 
-    .card, header {
+    .card, header, .description-card {
       position: relative;
       z-index: 1;
     }
 
-    /* Responsive: stack on mobile */
     @media (max-width: 700px) {
       .cards-container {
         flex-direction: column;
@@ -117,6 +132,17 @@
     <p><a href="index.html" style="color:#93c5fd; text-decoration:none;">&larr; Back to Home</a></p>
   </header>
 
+  <!-- Description Card -->
+  <div class="cards-container">
+    <div class="description-card">
+      <p>
+        Here is a personal repository of all the courses I have taken throughout my undergraduate and graduate studies. For each course, included are the notes and the syllabus (since OneNote is always trying to delete my files).
+        This is for personal use and reference only, please do not share or distribute to respect the original instructor's intellectual property.
+      </p>
+    </div>
+  </div>
+
+  <!-- Two side-by-side cards -->
   <div class="cards-container">
     <div class="card">
       <a href="bcom-finance.html">
