@@ -7,7 +7,7 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "##Taken from Machine Learning for Algorithmic Trading 2nd Edition chapter 2, very little original code here, just used to explore data retrieval"
+    "##Taken from Machine Learning for Algorithmic Trading 2nd Edition chapter 2, very little new code here, just used to practice/explore binary transformation and hdf file creation/use."
    ]
   },
   {
